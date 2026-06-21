@@ -1,0 +1,14 @@
+def findIntersectionValues(nums1, nums2):
+    s1 = set(nums1)
+    s2 = set(nums2)
+
+    answer1 = sum(num in s2 for num in nums1)
+    answer2 = sum(num in s1 for num in nums2)
+
+    return [answer1, answer2]
+
+# Example
+nums1 = [4,3,2,3,1]
+nums2 = [2,2,5,2,3,6]
+
+print(findIntersectionValues(nums1, nums2))
