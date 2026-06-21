@@ -1,0 +1,16 @@
+def maximum(arr):
+    if len(arr) == 0:
+        return None
+
+    maxElement = arr[0]
+
+    for i in arr:
+        if i > maxElement:
+            maxElement = i
+
+    return maxElement
+
+# Test Cases
+print(maximum([1,2,3,4,5]))
+print(maximum([7,7,7,7,7]))
+print(maximum([-10,2,3,-4,5]))
