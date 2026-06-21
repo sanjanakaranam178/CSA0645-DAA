@@ -1,0 +1,32 @@
+def binarySearch(arr, key):
+
+    left = 0
+    right = len(arr)-1
+
+    comparisons = 0
+
+    while left <= right:
+
+        mid = (left + right)//2
+
+        comparisons += 1
+
+        if arr[mid] == key:
+            return mid+1, comparisons
+
+        elif arr[mid] < key:
+            left = mid+1
+
+        else:
+            right = mid-1
+
+    return -1, comparisons
+
+
+arr = [5,10,15,20,25,30,35,40,45]
+
+position, count = binarySearch(arr,20)
+
+print("Position =", position)
+
+print("Comparisons =", count)
