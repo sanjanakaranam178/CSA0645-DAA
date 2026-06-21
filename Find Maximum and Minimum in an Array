@@ -1,0 +1,20 @@
+def findMinMax(arr):
+    if len(arr) == 0:
+        return None
+
+    minimum = maximum = arr[0]
+
+    for num in arr:
+        if num < minimum:
+            minimum = num
+        if num > maximum:
+            maximum = num
+
+    print("Min =", minimum)
+    print("Max =", maximum)
+
+
+# Test Cases
+findMinMax([5,7,3,4,9,12,6,2])
+findMinMax([1,3,5,7,9,11,13,15,17])
+findMinMax([22,34,35,36,43,67,12,13,15,17])
