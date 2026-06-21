@@ -1,0 +1,22 @@
+def quickSort(arr):
+    if len(arr) <= 1:
+        return arr
+
+    pivot = arr[0]
+
+    left = []
+    right = []
+
+    for x in arr[1:]:
+        if x <= pivot:
+            left.append(x)
+        else:
+            right.append(x)
+
+    return quickSort(left) + [pivot] + quickSort(right)
+
+
+# Test Cases
+print(quickSort([10,16,8,12,15,6,3,9,5]))
+print(quickSort([12,4,78,23,45,67,89,1]))
+print(quickSort([38,27,43,3,9,82,10]))
