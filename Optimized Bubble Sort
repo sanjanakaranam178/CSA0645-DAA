@@ -1,0 +1,27 @@
+def bubbleSort(arr):
+
+    n=len(arr)
+
+    for i in range(n):
+
+        swapped=False
+
+        for j in range(n-i-1):
+
+            if arr[j]>arr[j+1]:
+
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+
+                swapped=True
+
+        if not swapped:
+            break
+
+    return arr
+
+
+print(bubbleSort([64,25,12,22,11]))
+print(bubbleSort([29,10,14,37,13]))
+print(bubbleSort([3,5,2,1,4]))
+print(bubbleSort([1,2,3,4,5]))
+print(bubbleSort([5,4,3,2,1]))
