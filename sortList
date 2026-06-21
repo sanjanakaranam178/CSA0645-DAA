@@ -1,0 +1,8 @@
+def sortList(arr):
+    return sorted(arr)
+
+# Test Cases
+print(sortList([]))
+print(sortList([1]))
+print(sortList([7,7,7,7]))
+print(sortList([-5,-1,-3,-2,-4]))
