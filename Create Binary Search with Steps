@@ -1,0 +1,26 @@
+def binarySearch(arr,key):
+
+    left = 0
+    right = len(arr)-1
+
+    while left <= right:
+
+        mid = (left+right)//2
+
+        print("Mid Index =",mid,"Value =",arr[mid])
+
+        if arr[mid] == key:
+            return mid+1
+
+        elif arr[mid] < key:
+            left = mid+1
+
+        else:
+            right = mid-1
+
+    return -1
+
+
+arr = [3,9,14,19,25,31,42,47,53]
+
+print("Position =",binarySearch(arr,31))
