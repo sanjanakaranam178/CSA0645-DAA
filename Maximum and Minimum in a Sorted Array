@@ -1,0 +1,12 @@
+def sortedMinMax(arr):
+
+    print("Min =", arr[0])
+    print("Max =", arr[-1])
+
+
+# Test Cases
+sortedMinMax([2,4,6,8,10,12,14,18])
+
+sortedMinMax([11,13,15,17,19,21,23,35,37])
+
+sortedMinMax([12,13,15,17,22,34,35,36,43,67])
