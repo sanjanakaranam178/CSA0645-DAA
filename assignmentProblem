@@ -1,0 +1,33 @@
+from itertools import permutations
+
+def assignmentProblem(cost):
+
+    n = len(cost)
+
+    minCost = float('inf')
+    best = None
+
+    for perm in permutations(range(n)):
+
+        total = 0
+
+        for worker in range(n):
+            total += cost[worker][perm[worker]]
+
+        if total < minCost:
+            minCost = total
+            best = perm
+
+    return minCost, best
+
+
+cost = [
+    [3,10,7],
+    [8,5,12],
+    [4,6,9]
+]
+
+minimum, assignment = assignmentProblem(cost)
+
+print("Minimum Cost =", minimum)
+print("Assignment =", assignment)
