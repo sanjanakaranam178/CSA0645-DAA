@@ -1,0 +1,15 @@
+def robLine(nums):
+    prev = curr = 0
+    for money in nums:
+        prev, curr = curr, max(curr, prev + money)
+    return curr
+
+def rob(nums):
+    if len(nums) == 1:
+        return nums[0]
+
+    return max(robLine(nums[:-1]), robLine(nums[1:]))
+
+# Examples
+print(rob([2,3,2]))
+print(rob([1,2,3,1]))
